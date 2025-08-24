@@ -1,5 +1,5 @@
 /*
-Vümboni Msimango
+VÃ¼mboni Msimango
 SSMS Data Analytics
 20 August 2025
 
@@ -52,6 +52,7 @@ SELECT
         WHEN DATENAME(WEEKDAY, transaction_date) NOT IN ('Saturday', 'Sunday') THEN 'Weekday'
         ELSE 'Weekend'
     END AS day_classification,
+    transaction_time,
         CASE
         WHEN transaction_time BETWEEN '06:00:00' AND '08:59:59' THEN 'Early Morning'
         WHEN transaction_time BETWEEN '09:00:00' AND '11:59:59' THEN 'Morning'
@@ -85,6 +86,7 @@ SELECT
         WHEN DATENAME(WEEKDAY, transaction_date) NOT IN ('Saturday', 'Sunday') THEN 'Weekday'
         ELSE 'Weekend'
     END AS day_classification,
+    transaction_time,
         CASE
         WHEN transaction_time BETWEEN '06:00:00' AND '08:59:59' THEN 'Early Morning'
         WHEN transaction_time BETWEEN '09:00:00' AND '11:59:59' THEN 'Morning'
